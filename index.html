@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500&family=Assistant:wght@400;500;600&family=IBM+Plex+Sans+Hebrew:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" imagesrcset="assets/w/basalt-hero-480.webp 480w, assets/w/basalt-hero-960.webp 960w, assets/w/basalt-hero-1600.webp 1600w" imagesizes="(max-width: 960px) 100vw, 620px">
   <link rel="alternate" hreflang="he" href="https://keily-roizman.com/">
   <link rel="alternate" hreflang="en" href="https://keily-roizman.com/en/">
 </head>
@@ -58,7 +59,7 @@
     <figure class="hero-figure">
       <span class="sheet-tag">לוח 01</span>
       <div class="plate-frame">
-        <img src="assets/basalt-hero.jpg" alt="מטבח-סלון כהה: אי בר משיש שחור עם כיסאות בר מפוסלים, ארונות בגוון פחם, ויטרינות זכוכית וקיר חיפוי פסי אלון" fetchpriority="high">
+        <img src="assets/basalt-hero.jpg" srcset="assets/w/basalt-hero-480.webp 480w, assets/w/basalt-hero-960.webp 960w, assets/w/basalt-hero-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 620px" decoding="async" alt="מטבח-סלון כהה: אי בר משיש שחור עם כיסאות בר מפוסלים, ארונות בגוון פחם, ויטרינות זכוכית וקיר חיפוי פסי אלון" fetchpriority="high">
       </div>
       <figcaption class="titleblock">
         <div><span>פרויקט</span><strong>בזלת ואלון</strong></div>
@@ -85,7 +86,7 @@
         <div class="film-portrait">
           <span class="sheet-tag">גיליון A-101</span>
           <div class="plate-frame">
-            <video autoplay muted loop playsinline poster="assets/travertine-poster.jpg" aria-label="סרטון סיור במטבח אוריאן">
+            <video muted loop playsinline preload="none" poster="assets/travertine-poster.jpg" aria-label="סרטון סיור במטבח אוריאן">
               <source src="assets/travertine-film.mp4" type="video/mp4">
             </video>
           </div>
@@ -103,7 +104,7 @@
         <p class="plate-materials"><span>חומרים</span>טרוורטין · אגוז · זכוכית מעושנת</p>
         <div class="plate-detail">
           <div class="plate-frame">
-            <img src="assets/orian-01.jpg" alt="מטבח אוריאן לאחר ההתקנה: אי הטרוורטין מול קיר המכשירים הכהה" loading="lazy">
+            <img src="assets/orian-01.jpg" srcset="assets/w/orian-01-480.webp 480w, assets/w/orian-01-960.webp 960w, assets/w/orian-01-1151.webp 1151w" sizes="(max-width: 960px) 60vw, 300px" decoding="async" alt="מטבח אוריאן לאחר ההתקנה: אי הטרוורטין מול קיר המכשירים הכהה" loading="lazy">
           </div>
           <p class="fig-caption">איור B — האי וקיר המכשירים · כפי שבוצע</p>
         </div>
@@ -115,7 +116,7 @@
       <div class="plate-media">
         <span class="sheet-tag">גיליון A-102</span>
         <div class="plate-frame">
-          <img src="assets/render-abergel.jpg" alt="הדמיית מטבח אברגל: ארונות בהירים, אי אבן גדול עם נישת פסי אגוז, מקרר שחור וגופי תאורה כדוריים" loading="lazy">
+          <img src="assets/render-abergel.jpg" srcset="assets/w/render-abergel-480.webp 480w, assets/w/render-abergel-960.webp 960w, assets/w/render-abergel-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 55vw" decoding="async" alt="הדמיית מטבח אברגל: ארונות בהירים, אי אבן גדול עם נישת פסי אגוז, מקרר שחור וגופי תאורה כדוריים" loading="lazy">
         </div>
         <p class="fig-caption">איור A — הדמיית התכנון</p>
       </div>
@@ -130,7 +131,7 @@
         <p class="plate-materials"><span>חומרים</span>אבן בהירה · פסי אגוז · שחור מט</p>
         <div class="plate-detail">
           <div class="plate-frame">
-            <img src="assets/board-abergel.jpg" alt="לוח ההשראה של מטבח אברגל: אבן בהירה, פסי אגוז וטרוורטין" loading="lazy">
+            <img src="assets/board-abergel.jpg" srcset="assets/w/board-abergel-480.webp 480w, assets/w/board-abergel-960.webp 960w, assets/w/board-abergel-1536.webp 1536w" sizes="(max-width: 960px) 60vw, 300px" decoding="async" alt="לוח ההשראה של מטבח אברגל: אבן בהירה, פסי אגוז וטרוורטין" loading="lazy">
           </div>
           <p class="fig-caption">איור B — לוח ההשראה</p>
         </div>
@@ -142,7 +143,7 @@
       <div class="plate-media">
         <span class="sheet-tag">גיליון A-103</span>
         <div class="plate-frame">
-          <img src="assets/render-idit.jpg" alt="הדמיית מטבח אידית: קיר ארונות אגוז כהה מלא, אי נירוסטה וכיסאות בר לבנים" loading="lazy">
+          <img src="assets/render-idit.jpg" srcset="assets/w/render-idit-480.webp 480w, assets/w/render-idit-960.webp 960w, assets/w/render-idit-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 55vw" decoding="async" alt="הדמיית מטבח אידית: קיר ארונות אגוז כהה מלא, אי נירוסטה וכיסאות בר לבנים" loading="lazy">
         </div>
         <p class="fig-caption">איור A — הדמיית התכנון</p>
       </div>
@@ -157,7 +158,7 @@
         <p class="plate-materials"><span>חומרים</span>אגוז כהה · נירוסטה מוברשת · אבן חמה</p>
         <div class="plate-detail">
           <div class="plate-frame">
-            <img src="assets/board-idit.jpg" alt="לוח ההשראה של מטבח אידית: אגוז כהה, מתכת מוברשת ואבן" loading="lazy">
+            <img src="assets/board-idit.jpg" srcset="assets/w/board-idit-480.webp 480w, assets/w/board-idit-960.webp 960w, assets/w/board-idit-1152.webp 1152w" sizes="(max-width: 960px) 60vw, 300px" decoding="async" alt="לוח ההשראה של מטבח אידית: אגוז כהה, מתכת מוברשת ואבן" loading="lazy">
           </div>
           <p class="fig-caption">איור B — לוח ההשראה</p>
         </div>
@@ -169,7 +170,7 @@
       <div class="plate-media">
         <span class="sheet-tag">גיליון A-104</span>
         <div class="plate-frame">
-          <img src="assets/render-telker.jpg" alt="הדמיית מטבח טלקר: ארונות ממוסגרים בירוק מרווה, אי עם ויטרינות תצוגה וקיר מכשירים שחור" loading="lazy">
+          <img src="assets/render-telker.jpg" srcset="assets/w/render-telker-480.webp 480w, assets/w/render-telker-960.webp 960w, assets/w/render-telker-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 55vw" decoding="async" alt="הדמיית מטבח טלקר: ארונות ממוסגרים בירוק מרווה, אי עם ויטרינות תצוגה וקיר מכשירים שחור" loading="lazy">
         </div>
         <p class="fig-caption">איור A — הדמיית התכנון</p>
       </div>
@@ -184,7 +185,7 @@
         <p class="plate-materials"><span>חומרים</span>מרווה · אבן בהירה · שחור מט</p>
         <div class="plate-detail">
           <div class="plate-frame">
-            <img src="assets/board-telker.jpg" alt="לוח ההשראה של מטבח טלקר: ירוק מרווה, אבן ועץ" loading="lazy">
+            <img src="assets/board-telker.jpg" srcset="assets/w/board-telker-480.webp 480w, assets/w/board-telker-960.webp 960w, assets/w/board-telker-1536.webp 1536w" sizes="(max-width: 960px) 60vw, 300px" decoding="async" alt="לוח ההשראה של מטבח טלקר: ירוק מרווה, אבן ועץ" loading="lazy">
           </div>
           <p class="fig-caption">איור B — לוח ההשראה</p>
         </div>
@@ -196,7 +197,7 @@
       <div class="plate-media">
         <span class="sheet-tag">גיליון A-105</span>
         <div class="plate-frame">
-          <img src="assets/render-stepanko.jpg" alt="הדמיית מטבח סטפנקו: מטבח מינימליסטי בגוני אבן חמים, אי מונוליתי וקיר זכוכית לגינה" loading="lazy">
+          <img src="assets/render-stepanko.jpg" srcset="assets/w/render-stepanko-480.webp 480w, assets/w/render-stepanko-960.webp 960w, assets/w/render-stepanko-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 55vw" decoding="async" alt="הדמיית מטבח סטפנקו: מטבח מינימליסטי בגוני אבן חמים, אי מונוליתי וקיר זכוכית לגינה" loading="lazy">
         </div>
         <p class="fig-caption">איור A — הדמיית התכנון</p>
       </div>
@@ -211,7 +212,7 @@
         <p class="plate-materials"><span>חומרים</span>אבן גיר · גריז׳ חם · זכוכית</p>
         <div class="plate-detail">
           <div class="plate-frame">
-            <img src="assets/board-stepanko.jpg" alt="לוח ההשראה של מטבח סטפנקו: אבן גיר, גוני חול ועץ בהיר" loading="lazy">
+            <img src="assets/board-stepanko.jpg" srcset="assets/w/board-stepanko-480.webp 480w, assets/w/board-stepanko-960.webp 960w, assets/w/board-stepanko-1536.webp 1536w" sizes="(max-width: 960px) 60vw, 300px" decoding="async" alt="לוח ההשראה של מטבח סטפנקו: אבן גיר, גוני חול ועץ בהיר" loading="lazy">
           </div>
           <p class="fig-caption">איור B — לוח ההשראה</p>
         </div>
@@ -232,19 +233,19 @@
       <div class="materials-grid renders-grid">
         <figure class="reveal">
           <div class="plate-frame">
-            <img src="assets/render-nissim.jpg" alt="הדמיית בר אירוח לניסים: קיר בר כהה עם מדפי זכוכית מוארים, חיפוי פסי אלון ודלפק שיש" loading="lazy">
+            <img src="assets/render-nissim.jpg" srcset="assets/w/render-nissim-480.webp 480w, assets/w/render-nissim-960.webp 960w, assets/w/render-nissim-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית בר אירוח לניסים: קיר בר כהה עם מדפי זכוכית מוארים, חיפוי פסי אלון ודלפק שיש" loading="lazy">
           </div>
           <figcaption class="fig-caption">איור 01 — בר אירוח · ניסים</figcaption>
         </figure>
         <figure class="reveal">
           <div class="plate-frame">
-            <img src="assets/render-shoval.jpg" alt="הדמיית מטבח שובל: ארונות בהירים עם נישה מוארת, אי אבן לבן וארבעה כיסאות בר" loading="lazy">
+            <img src="assets/render-shoval.jpg" srcset="assets/w/render-shoval-480.webp 480w, assets/w/render-shoval-960.webp 960w, assets/w/render-shoval-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית מטבח שובל: ארונות בהירים עם נישה מוארת, אי אבן לבן וארבעה כיסאות בר" loading="lazy">
           </div>
           <figcaption class="fig-caption">איור 02 — מטבח שובל</figcaption>
         </figure>
         <figure class="reveal">
           <div class="plate-frame">
-            <img src="assets/render-outdoor.jpg" alt="הדמיית מטבח חוץ: חזית אבן בהירה עם עמדת גריל, ברז שחור ועצי זית" loading="lazy">
+            <img src="assets/render-outdoor.jpg" srcset="assets/w/render-outdoor-480.webp 480w, assets/w/render-outdoor-960.webp 960w, assets/w/render-outdoor-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית מטבח חוץ: חזית אבן בהירה עם עמדת גריל, ברז שחור ועצי זית" loading="lazy">
           </div>
           <figcaption class="fig-caption">איור 03 — מטבח חוץ</figcaption>
         </figure>
@@ -267,11 +268,11 @@
         <span class="sheet-tag">גיליון A-106</span>
         <div class="plate-frame">
           <div class="slides" role="group" aria-roledescription="קרוסלה" aria-label="ערפל ואגוז — תצלומים">
-            <img src="assets/shoot-01.jpg" class="active" alt="קיילי ליד אי האבן הבהיר במטבח בגווני אפור-ערפילי ואגוז, עם ברזים שחורים משני צדדיו" loading="lazy">
-            <img src="assets/shoot-02.jpg" alt="חזית מלאה של המטבח בגוון אפור-ערפילי: ארונות גבוהים ללא ידיות המקיפים נישת אגוז כהה" loading="lazy">
-            <img src="assets/shoot-03.jpg" alt="מבט אנכי על הארונות הגבוהים בגוון אפור-ערפילי ועל יחידות הקיר מאגוז כהה" loading="lazy">
-            <img src="assets/shoot-04.jpg" alt="פרט אנכי של אי האבן עם הברז השחור המט שלו" loading="lazy">
-            <img src="assets/shoot-05.jpg" alt="פרט של יחידות הבסיס מאגוז מתחת למשטח האבן הבהיר" loading="lazy">
+            <img src="assets/shoot-01.jpg" srcset="assets/w/shoot-01-480.webp 480w, assets/w/shoot-01-960.webp 960w, assets/w/shoot-01-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" class="active" alt="קיילי ליד אי האבן הבהיר במטבח בגווני אפור-ערפילי ואגוז, עם ברזים שחורים משני צדדיו" loading="lazy">
+            <img src="assets/shoot-02.jpg" srcset="assets/w/shoot-02-480.webp 480w, assets/w/shoot-02-960.webp 960w, assets/w/shoot-02-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="חזית מלאה של המטבח בגוון אפור-ערפילי: ארונות גבוהים ללא ידיות המקיפים נישת אגוז כהה" loading="lazy">
+            <img src="assets/shoot-03.jpg" srcset="assets/w/shoot-03-480.webp 480w, assets/w/shoot-03-960.webp 960w, assets/w/shoot-03-1366.webp 1366w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="מבט אנכי על הארונות הגבוהים בגוון אפור-ערפילי ועל יחידות הקיר מאגוז כהה" loading="lazy">
+            <img src="assets/shoot-04.jpg" srcset="assets/w/shoot-04-480.webp 480w, assets/w/shoot-04-960.webp 960w, assets/w/shoot-04-1366.webp 1366w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="פרט אנכי של אי האבן עם הברז השחור המט שלו" loading="lazy">
+            <img src="assets/shoot-05.jpg" srcset="assets/w/shoot-05-480.webp 480w, assets/w/shoot-05-960.webp 960w, assets/w/shoot-05-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="פרט של יחידות הבסיס מאגוז מתחת למשטח האבן הבהיר" loading="lazy">
           </div>
         </div>
         <figcaption class="gallery-caption">
@@ -284,13 +285,13 @@
         <span class="sheet-tag">גיליון A-107</span>
         <div class="plate-frame">
           <div class="slides" role="group" aria-roledescription="קרוסלה" aria-label="ענבר ואלון — תצלומים">
-            <img src="assets/shoot-06.jpg" class="active" alt="מטבח חיפוי פסי אלון תחת גופי תאורה תלויים מזכוכית ענבר, עם כיסאות בר ירוקים בגוון מרווה סביב האי" loading="lazy">
-            <img src="assets/shoot-07.jpg" alt="רצף מטבח לבן עם ארונות אלון מחורצים וחיפוי קיר בעל עורקי שיש" loading="lazy">
-            <img src="assets/shoot-08.jpg" alt="האי וגופי התאורה כפי שנראים מאזור הסלון" loading="lazy">
-            <img src="assets/shoot-09.jpg" alt="פרט חיפוי האלון המחורץ על האי" loading="lazy">
-            <img src="assets/shoot-10.jpg" alt="קיר הבישול עם ברז שחור וארונות עליונים מעץ אלון חם" loading="lazy">
-            <img src="assets/shoot-11.jpg" alt="מבט רחב על המטבח הפתוח ופינת האוכל" loading="lazy">
-            <img src="assets/shoot-12.jpg" alt="פרט אנכי של גופי התאורה מזכוכית ענבר מעל משטח האבן" loading="lazy">
+            <img src="assets/shoot-06.jpg" srcset="assets/w/shoot-06-480.webp 480w, assets/w/shoot-06-960.webp 960w, assets/w/shoot-06-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" class="active" alt="מטבח חיפוי פסי אלון תחת גופי תאורה תלויים מזכוכית ענבר, עם כיסאות בר ירוקים בגוון מרווה סביב האי" loading="lazy">
+            <img src="assets/shoot-07.jpg" srcset="assets/w/shoot-07-480.webp 480w, assets/w/shoot-07-960.webp 960w, assets/w/shoot-07-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רצף מטבח לבן עם ארונות אלון מחורצים וחיפוי קיר בעל עורקי שיש" loading="lazy">
+            <img src="assets/shoot-08.jpg" srcset="assets/w/shoot-08-480.webp 480w, assets/w/shoot-08-960.webp 960w, assets/w/shoot-08-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="האי וגופי התאורה כפי שנראים מאזור הסלון" loading="lazy">
+            <img src="assets/shoot-09.jpg" srcset="assets/w/shoot-09-480.webp 480w, assets/w/shoot-09-960.webp 960w, assets/w/shoot-09-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="פרט חיפוי האלון המחורץ על האי" loading="lazy">
+            <img src="assets/shoot-10.jpg" srcset="assets/w/shoot-10-480.webp 480w, assets/w/shoot-10-960.webp 960w, assets/w/shoot-10-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="קיר הבישול עם ברז שחור וארונות עליונים מעץ אלון חם" loading="lazy">
+            <img src="assets/shoot-11.jpg" srcset="assets/w/shoot-11-480.webp 480w, assets/w/shoot-11-960.webp 960w, assets/w/shoot-11-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="מבט רחב על המטבח הפתוח ופינת האוכל" loading="lazy">
+            <img src="assets/shoot-12.jpg" srcset="assets/w/shoot-12-480.webp 480w, assets/w/shoot-12-960.webp 960w, assets/w/shoot-12-1364.webp 1364w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="פרט אנכי של גופי התאורה מזכוכית ענבר מעל משטח האבן" loading="lazy">
           </div>
         </div>
         <figcaption class="gallery-caption">
@@ -337,19 +338,19 @@
     <div class="materials-grid renders-grid gmar-renders">
       <figure class="reveal">
         <div class="plate-frame">
-          <img src="assets/gmar-01.jpg" alt="הדמיית חוץ של פרויקט הגמר: נפחי אבן בנוף מדברי עם צמחייה מקומית" loading="lazy">
+          <img src="assets/gmar-01.jpg" srcset="assets/w/gmar-01-480.webp 480w, assets/w/gmar-01-960.webp 960w, assets/w/gmar-01-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית חוץ של פרויקט הגמר: נפחי אבן בנוף מדברי עם צמחייה מקומית" loading="lazy">
         </div>
         <figcaption class="fig-caption">איור 01 — חזית ראשית</figcaption>
       </figure>
       <figure class="reveal">
         <div class="plate-frame">
-          <img src="assets/gmar-02.jpg" alt="הדמיית חוץ נוספת: חצר כניסה מרוצפת עם תעלת מים וגן מדברי" loading="lazy">
+          <img src="assets/gmar-02.jpg" srcset="assets/w/gmar-02-480.webp 480w, assets/w/gmar-02-960.webp 960w, assets/w/gmar-02-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית חוץ נוספת: חצר כניסה מרוצפת עם תעלת מים וגן מדברי" loading="lazy">
         </div>
         <figcaption class="fig-caption">איור 02 — חצר הכניסה</figcaption>
       </figure>
       <figure class="reveal">
         <div class="plate-frame">
-          <img src="assets/gmar-03.jpg" alt="הדמיית פנים: חלל קבלה עם קיר אבן, ריהוט עץ וחזית זכוכית לנוף" loading="lazy">
+          <img src="assets/gmar-03.jpg" srcset="assets/w/gmar-03-480.webp 480w, assets/w/gmar-03-960.webp 960w, assets/w/gmar-03-1600.webp 1600w" sizes="(max-width: 640px) 100vw, (max-width: 960px) 50vw, 30vw" decoding="async" alt="הדמיית פנים: חלל קבלה עם קיר אבן, ריהוט עץ וחזית זכוכית לנוף" loading="lazy">
         </div>
         <figcaption class="fig-caption">איור 03 — חלל הקבלה</figcaption>
       </figure>
@@ -372,10 +373,10 @@
           <span class="sheet-tag">גיליון C-301</span>
           <div class="plate-frame">
             <div class="slides" role="group" aria-roledescription="קרוסלה" aria-label="פרויקט מרפאה — דגם והדמיות">
-              <img src="assets/clinic-01.jpg" class="active" alt="דגם פיזי של פרויקט המרפאה במבט על, עם תכניות עבודה ברקע" loading="lazy">
-              <img src="assets/clinic-02.jpg" alt="הדמיית תלת-ממד של פנים המרפאה" loading="lazy">
-              <img src="assets/clinic-03.jpg" alt="הדמיית תלת-ממד נוספת של חללי המרפאה" loading="lazy">
-              <img src="assets/clinic-04.jpg" alt="הדמיית תלת-ממד של אזור הקבלה במרפאה" loading="lazy">
+              <img src="assets/clinic-01.jpg" srcset="assets/w/clinic-01-480.webp 480w, assets/w/clinic-01-960.webp 960w, assets/w/clinic-01-1152.webp 1152w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" class="active" alt="דגם פיזי של פרויקט המרפאה במבט על, עם תכניות עבודה ברקע" loading="lazy">
+              <img src="assets/clinic-02.jpg" srcset="assets/w/clinic-02-480.webp 480w, assets/w/clinic-02-960.webp 960w, assets/w/clinic-02-1152.webp 1152w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="הדמיית תלת-ממד של פנים המרפאה" loading="lazy">
+              <img src="assets/clinic-03.jpg" srcset="assets/w/clinic-03-480.webp 480w, assets/w/clinic-03-960.webp 960w, assets/w/clinic-03-1152.webp 1152w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="הדמיית תלת-ממד נוספת של חללי המרפאה" loading="lazy">
+              <img src="assets/clinic-04.jpg" srcset="assets/w/clinic-04-480.webp 480w, assets/w/clinic-04-960.webp 960w, assets/w/clinic-04-1152.webp 1152w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="הדמיית תלת-ממד של אזור הקבלה במרפאה" loading="lazy">
             </div>
           </div>
           <figcaption class="gallery-caption">
@@ -427,10 +428,10 @@
         <span class="sheet-tag">גיליון D-401</span>
         <div class="plate-frame">
           <div class="slides" role="group" aria-roledescription="קרוסלה" aria-label="רישומים ידניים — חלק ראשון">
-            <img src="assets/sketch-01.jpg" class="active" alt="רישום עיפרון של רחוב עירוני בפרספקטיבה חד-נקודתית, בין מגדלים גבוהים" loading="lazy">
-            <img src="assets/sketch-02.jpg" alt="רישום עיפרון של גשר קשתות אבן מעל נהר" loading="lazy">
-            <img src="assets/sketch-03.jpg" alt="רישום עיפרון של מבנה אבן ביפו, חתום קיילי רוייזמן" loading="lazy">
-            <img src="assets/sketch-04.jpg" alt="רישום עיפרון של החומה הסינית המתפתלת בין ההרים" loading="lazy">
+            <img src="assets/sketch-01.jpg" srcset="assets/w/sketch-01-480.webp 480w, assets/w/sketch-01-960.webp 960w, assets/w/sketch-01-1453.webp 1453w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" class="active" alt="רישום עיפרון של רחוב עירוני בפרספקטיבה חד-נקודתית, בין מגדלים גבוהים" loading="lazy">
+            <img src="assets/sketch-02.jpg" srcset="assets/w/sketch-02-480.webp 480w, assets/w/sketch-02-960.webp 960w, assets/w/sketch-02-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון של גשר קשתות אבן מעל נהר" loading="lazy">
+            <img src="assets/sketch-03.jpg" srcset="assets/w/sketch-03-480.webp 480w, assets/w/sketch-03-960.webp 960w, assets/w/sketch-03-1403.webp 1403w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון של מבנה אבן ביפו, חתום קיילי רוייזמן" loading="lazy">
+            <img src="assets/sketch-04.jpg" srcset="assets/w/sketch-04-480.webp 480w, assets/w/sketch-04-960.webp 960w, assets/w/sketch-04-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון של החומה הסינית המתפתלת בין ההרים" loading="lazy">
           </div>
         </div>
         <figcaption class="gallery-caption">
@@ -443,10 +444,10 @@
         <span class="sheet-tag">גיליון D-402</span>
         <div class="plate-frame">
           <div class="slides" role="group" aria-roledescription="קרוסלה" aria-label="רישומים ידניים — חלק שני">
-            <img src="assets/sketch-05.jpg" class="active" alt="רישום עיפרון של מקדש השמיים בבייג׳ינג" loading="lazy">
-            <img src="assets/sketch-06.jpg" alt="רישום עיפרון של מבנה מסורתי בסין" loading="lazy">
-            <img src="assets/sketch-07.jpg" alt="רישום עיפרון של מבנה בעל גאומטריה מיוחדת" loading="lazy">
-            <img src="assets/sketch-08.jpg" alt="רישום עיפרון אדריכלי נוסף מהלימודים" loading="lazy">
+            <img src="assets/sketch-05.jpg" srcset="assets/w/sketch-05-480.webp 480w, assets/w/sketch-05-960.webp 960w, assets/w/sketch-05-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" class="active" alt="רישום עיפרון של מקדש השמיים בבייג׳ינג" loading="lazy">
+            <img src="assets/sketch-06.jpg" srcset="assets/w/sketch-06-480.webp 480w, assets/w/sketch-06-960.webp 960w, assets/w/sketch-06-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון של מבנה מסורתי בסין" loading="lazy">
+            <img src="assets/sketch-07.jpg" srcset="assets/w/sketch-07-480.webp 480w, assets/w/sketch-07-960.webp 960w, assets/w/sketch-07-1379.webp 1379w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון של מבנה בעל גאומטריה מיוחדת" loading="lazy">
+            <img src="assets/sketch-08.jpg" srcset="assets/w/sketch-08-480.webp 480w, assets/w/sketch-08-960.webp 960w, assets/w/sketch-08-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 44vw" decoding="async" alt="רישום עיפרון אדריכלי נוסף מהלימודים" loading="lazy">
           </div>
         </div>
         <figcaption class="gallery-caption">
@@ -484,7 +485,7 @@
     <div class="profile-grid">
       <figure class="profile-side reveal">
         <div class="plate-frame">
-          <img src="assets/keily-portrait.jpg" alt="דיוקן של קיילי רוייזמן" loading="lazy">
+          <img src="assets/keily-portrait.jpg" srcset="assets/w/keily-portrait-480.webp 480w, assets/w/keily-portrait-960.webp 960w, assets/w/keily-portrait-1337.webp 1337w" sizes="(max-width: 960px) 340px, 320px" decoding="async" alt="דיוקן של קיילי רוייזמן" loading="lazy">
         </div>
         <figcaption class="fig-caption">קיילי רוייזמן · אדריכלות ועיצוב פנים</figcaption>
       </figure>
@@ -646,6 +647,19 @@
 
   // Scroll reveals + draw-on divider (skipped under reduced motion)
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // The walkthrough film starts loading only when it nears the viewport,
+  // so the initial page load stays light.
+  const film = document.querySelector('.film-portrait video');
+  if (film && !reduced && 'IntersectionObserver' in window) {
+    const filmIO = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { film.play(); filmIO.disconnect(); }
+      });
+    }, { rootMargin: '300px' });
+    filmIO.observe(film);
+  }
+
   const targets = document.querySelectorAll('.reveal, .reveal-draw');
   if (!reduced && 'IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => {
