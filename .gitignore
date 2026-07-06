@@ -7,6 +7,7 @@
 !/style.css
 !/CNAME
 !/assets/
+!/en/
 
 # never ship raw phone formats even if they land in assets/
 *.HEIC
