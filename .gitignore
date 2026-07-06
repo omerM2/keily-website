@@ -1,0 +1,15 @@
+# Whitelist: only the published website goes to GitHub.
+# Everything else (original client photos, HEIC/MOV footage, working
+# folders) stays private on this machine.
+/*
+!/.gitignore
+!/index.html
+!/style.css
+!/CNAME
+!/assets/
+
+# never ship raw phone formats even if they land in assets/
+*.HEIC
+*.heic
+*.MOV
+*.mov

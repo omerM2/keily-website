@@ -1,0 +1,706 @@
+/* ═══════════════════════════════════════════════════════════
+   KEILY — Residential Architect
+   Concept: an architect's drawing set. Photography sits on the
+   sheets as mounted plates; type follows drafting vernacular.
+   Palette drawn from the work itself: plaster, travertine,
+   walnut ink, sage.
+   ═══════════════════════════════════════════════════════════ */
+
+:root {
+  --paper:      #f3f1eb;   /* warm plaster sheet */
+  --paper-deep: #eae6dd;   /* alt ground (travertine) */
+  --card:       #faf9f5;   /* plate matte */
+  --ink:        #26221b;   /* walnut ink */
+  --ink-soft:   #6f675a;
+  --accent:     #565d4e;   /* deep sage */
+  --accent-ink: #434a3c;
+  --line:       #d4cec0;   /* hairline rules */
+  --grid-line:  rgba(86, 93, 78, 0.055);
+  --shadow:     rgba(38, 34, 27, 0.14);
+
+  --display: "Marcellus", "Palatino", Georgia, serif;
+  --body:    "Archivo", -apple-system, "Helvetica Neue", sans-serif;
+  --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper:      #1b1915;   /* studio at night */
+    --paper-deep: #15130f;
+    --card:       #232019;
+    --ink:        #e9e3d6;
+    --ink-soft:   #a49a89;
+    --accent:     #a8b096;   /* sage, lifted */
+    --accent-ink: #bcc4aa;
+    --line:       #3b362c;
+    --grid-line:  rgba(168, 176, 150, 0.05);
+    --shadow:     rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* ── Reset & ground ─────────────────────────────────────── */
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body);
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 36px 36px;
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+img, svg, video { max-width: 100%; display: block; }
+
+::selection { background: var(--accent); color: var(--paper); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* ── Drafting vernacular ────────────────────────────────── */
+
+.drafting-label {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.sheet-tag {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.1rem;
+  z-index: 2;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: 0.18rem 0.65rem;
+}
+
+.fig-caption {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.7rem;
+}
+
+/* circular section callout, as on a drawing */
+.callout {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border: 1.5px solid var(--ink);
+  border-radius: 50%;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.callout span:first-child { border-bottom: 1.5px solid var(--ink); width: 100%; text-align: center; padding-top: 0.5em; }
+.callout span:last-child { padding-bottom: 0.4em; }
+
+.callout-center { margin: 0 auto 1.6rem; }
+
+/* mounted-plate frame around all imagery */
+.plate-frame {
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--card);
+  padding: 10px;
+  box-shadow: 0 1px 0 var(--shadow);
+}
+
+.plate-frame img, .plate-frame video { width: 100%; height: 100%; object-fit: cover; }
+
+/* ── Header ─────────────────────────────────────────────── */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem clamp(1.25rem, 5vw, 4rem);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+  font-family: var(--display);
+  font-size: 1.3rem;
+  letter-spacing: 0.38em;
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.wordmark-sub {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.site-nav { display: flex; gap: 1.9rem; align-items: center; }
+
+.site-nav a {
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-soft);
+  padding: 0.3rem 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.site-nav a:hover { color: var(--accent-ink); border-bottom-color: var(--accent); }
+
+.nav-contact {
+  border: 1px solid var(--accent) !important;
+  color: var(--accent-ink) !important;
+  padding: 0.45rem 1.05rem !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+.nav-contact:hover { background: var(--accent); color: var(--paper) !important; }
+
+.menu-toggle { display: none; }
+
+/* ── Buttons ────────────────────────────────────────────── */
+
+.btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.85rem 1.7rem;
+  border: 1px solid var(--accent);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-solid { background: var(--accent); color: var(--paper); }
+.btn-solid:hover { background: var(--accent-ink); border-color: var(--accent-ink); }
+
+.btn-line { color: var(--accent-ink); }
+.btn-line:hover { background: var(--accent); color: var(--paper); }
+
+.btn-lg { padding: 1.05rem 2.3rem; font-size: 0.88rem; }
+
+/* ── Hero ───────────────────────────────────────────────── */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.8rem, 7vh, 4.5rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5.5rem) clamp(1.25rem, 5vw, 4rem) clamp(3.5rem, 9vh, 7rem);
+}
+
+.hero-text .drafting-label { margin-bottom: 1.4rem; color: var(--accent-ink); }
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5.2vw, 4.1rem);
+  margin-bottom: 1.5rem;
+}
+
+.lede {
+  font-size: 1.08rem;
+  color: var(--ink-soft);
+  max-width: 32rem;
+  margin-bottom: 2.4rem;
+}
+
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* dimension-line flourish under hero actions */
+.hero-dim {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-top: 3.2rem;
+  color: var(--ink-soft);
+}
+
+.hero-dim .dim-line { flex: 1; height: 1px; background: var(--line); }
+
+.hero-dim .dim-tick {
+  width: 10px;
+  height: 10px;
+  border-bottom: 1px solid var(--ink-soft);
+  transform: rotate(-45deg) translateY(4px);
+}
+
+.hero-dim .dim-label {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+}
+
+.hero-figure { position: relative; }
+
+.hero-figure .plate-frame img { aspect-ratio: 5 / 3; }
+
+/* ── Title blocks ───────────────────────────────────────── */
+
+.titleblock {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-top: none;
+  background: var(--card);
+}
+
+.titleblock div {
+  padding: 0.55rem 0.9rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.titleblock div:not(:last-child) { border-right: 1px solid var(--line); }
+
+.titleblock span, .titleblock-footer span {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.titleblock strong {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: 0.86rem;
+}
+
+/* ── Sections ───────────────────────────────────────────── */
+
+.section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.section-alt {
+  max-width: none;
+  background: var(--paper-deep);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-alt-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: clamp(3.5rem, 9vh, 6.5rem) clamp(1.25rem, 5vw, 4rem);
+}
+
+.section-alt > .section-alt-inner { padding-top: 0; padding-bottom: 0; }
+
+.section-alt { padding: clamp(3.5rem, 9vh, 6.5rem) 0; }
+
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+
+.section-head h2 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); }
+
+.section-head .drafting-label { margin-top: 0.35rem; }
+
+/* ── Work plates ────────────────────────────────────────── */
+
+.plate {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: start;
+  padding: clamp(2.5rem, 6vh, 4rem) 0;
+}
+
+.plate + .plate { border-top: 1px solid var(--line); }
+
+.plate-flip { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+
+.plate-flip .plate-media { order: 2; }
+.plate-flip .plate-info { order: 1; }
+
+.plate-media { position: relative; }
+
+.plate-media .plate-frame img { aspect-ratio: 4 / 3; }
+
+/* the walkthrough film is portrait phone footage — mount it as a tall plate */
+.film-portrait {
+  position: relative;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.plate-media .plate-frame video { aspect-ratio: 9 / 16; }
+
+.plate-info { padding-top: 0.4rem; }
+
+.plate-info h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); margin-bottom: 0.5rem; }
+
+.plate-meta {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  margin-bottom: 1.2rem;
+}
+
+.plate-desc { color: var(--ink-soft); max-width: 36rem; }
+
+.plate-materials {
+  margin-top: 1.4rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.plate-materials span {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.plate-detail { margin-top: 1.8rem; max-width: 300px; }
+
+.plate-detail .plate-frame img { aspect-ratio: 1 / 1; }
+
+/* ── Gallery · auto-cycling plates ──────────────────────── */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+.gallery-plate { position: relative; margin: 0; }
+
+.gallery-plate .slides {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.gallery-plate .slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+
+.gallery-plate .slides img.active {
+  opacity: 1;
+  animation: plate-drift 7s ease-out forwards;
+}
+
+/* slow push-in while a plate is on display */
+@keyframes plate-drift { from { transform: scale(1); } to { transform: scale(1.045); } }
+
+.gallery-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.slide-count { color: var(--accent-ink); }
+
+.slide-dots { display: flex; gap: 0.5rem; margin-top: 0.7rem; }
+
+.slide-dots button {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid var(--ink-soft);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.slide-dots button:hover { border-color: var(--accent-ink); }
+
+.slide-dots button.active { background: var(--accent); border-color: var(--accent); }
+
+/* ── Material studies ───────────────────────────────────── */
+
+.materials-lede {
+  color: var(--ink-soft);
+  max-width: 36rem;
+  margin: -1.2rem 0 2.8rem;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.4rem, 3vw, 2.4rem);
+}
+
+.materials-grid .plate-frame img { aspect-ratio: 3 / 4; }
+
+/* ── Drawn elevation divider ────────────────────────────── */
+
+.elevation-divider {
+  max-width: 620px;
+  margin: clamp(3rem, 8vh, 5.5rem) auto 0;
+  padding: 0 1.5rem;
+  color: var(--ink);
+}
+
+.elevation-divider .dim { color: var(--ink-soft); }
+
+.elevation-divider text {
+  font-family: var(--mono);
+  font-size: 12px;
+  fill: var(--ink-soft);
+  stroke: none;
+}
+
+/* draw-on animation */
+.reveal-draw .draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.reveal-draw .fade { opacity: 0; }
+
+.reveal-draw.visible .draw {
+  animation: drawline 1.1s ease forwards;
+  animation-delay: calc(var(--i, 0) * 0.16s);
+}
+
+.reveal-draw.visible .fade {
+  animation: fadein 0.5s ease forwards;
+  animation-delay: calc(var(--i, 0) * 0.16s);
+}
+
+@keyframes drawline { to { stroke-dashoffset: 0; } }
+@keyframes fadein { to { opacity: 1; } }
+
+/* ── Profile ────────────────────────────────────────────── */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+
+.profile-side { margin: 0; }
+
+.profile-side .plate-frame img { aspect-ratio: 4 / 5; }
+
+.profile-side .fig-caption { text-align: center; }
+
+.profile-text .section-head { margin-bottom: 1.8rem; }
+
+.profile-text p { color: var(--ink-soft); max-width: 40rem; margin-bottom: 1.1rem; }
+
+.profile-text blockquote {
+  font-family: var(--display);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  color: var(--ink);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.4rem;
+  margin-top: 1.8rem;
+  max-width: 34rem;
+}
+
+/* ── Process ────────────────────────────────────────────── */
+
+.phases {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.8rem, 4vw, 3rem);
+}
+
+.phases li { border-top: 2px solid var(--accent); padding-top: 1.3rem; }
+
+.phase-tag {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+
+.phases h3 { font-size: 1.35rem; margin: 0.55rem 0 0.6rem; }
+
+.phases p { color: var(--ink-soft); font-size: 0.97rem; }
+
+/* ── Contact ────────────────────────────────────────────── */
+
+.contact { text-align: center; }
+
+.contact-inner { max-width: 42rem; margin: 0 auto; }
+
+.contact h2 { font-size: clamp(2rem, 4.4vw, 3rem); margin-bottom: 0.9rem; }
+
+.contact-inner > p { color: var(--ink-soft); margin-bottom: 2.4rem; }
+
+.contact-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-meta { margin-top: 1.8rem; }
+
+/* ── Footer title block ─────────────────────────────────── */
+
+.titleblock-footer {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.2fr;
+  border-top: 1px solid var(--line);
+  background: var(--card);
+}
+
+.titleblock-footer div {
+  padding: 0.85rem clamp(0.8rem, 2vw, 1.4rem);
+  border-right: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.titleblock-footer div:last-child { border-right: none; }
+
+.titleblock-footer strong {
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.titleblock-footer a {
+  color: var(--accent-ink);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.titleblock-footer a:hover { text-decoration: underline; }
+
+/* ── Reveal on scroll ───────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .reveal-draw .draw { stroke-dashoffset: 0; animation: none !important; }
+  .reveal-draw .fade { opacity: 1; animation: none !important; }
+  .gallery-plate .slides img { transition: none; animation: none !important; }
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 960px) {
+  .titleblock { grid-template-columns: repeat(2, 1fr); }
+  .titleblock div:nth-child(even) { border-right: none; }
+  .plate, .plate-flip { grid-template-columns: 1fr; gap: 1.6rem; }
+  .plate-flip .plate-media { order: 1; }
+  .plate-flip .plate-info { order: 2; }
+  .gallery-grid { grid-template-columns: 1fr; gap: 2.6rem; }
+  .materials-grid { grid-template-columns: 1fr 1fr; }
+  .materials-grid figure:last-child { grid-column: 1 / -1; max-width: 60%; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .profile-side { order: 2; max-width: 340px; margin: 0 auto; }
+  .phases { grid-template-columns: 1fr; }
+  .titleblock-footer { grid-template-columns: 1fr 1fr; }
+  .titleblock-footer div { border-bottom: 1px solid var(--line); }
+}
+
+@media (max-width: 640px) {
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+  }
+
+  .menu-toggle span { width: 24px; height: 1.5px; background: var(--ink); }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 0.6rem;
+  }
+
+  .site-nav.open { display: flex; }
+
+  .site-nav a { padding: 0.9rem 1.5rem; border-bottom: none; }
+
+  .nav-contact { border: none !important; margin: 0 !important; }
+
+  .materials-grid { grid-template-columns: 1fr; }
+  .materials-grid figure:last-child { max-width: none; }
+  .hero-figure .plate-frame img { aspect-ratio: 4 / 3; }
+}
