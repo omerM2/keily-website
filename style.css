@@ -597,6 +597,13 @@ img, svg, video { max-width: 100%; display: block; }
 
 .contact h2 { font-size: clamp(2rem, 4.4vw, 3rem); margin-bottom: 0.9rem; }
 
+/* longer manifesto-style contact line on the Hebrew edition */
+.contact h2.contact-belief {
+  font-size: clamp(1.55rem, 3vw, 2.3rem);
+  max-width: 36rem;
+  margin: 0 auto 2.4rem;
+}
+
 .contact-inner > p { color: var(--ink-soft); margin-bottom: 2.4rem; }
 
 .contact-actions {
