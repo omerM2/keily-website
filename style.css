@@ -383,7 +383,9 @@ img, svg, video { max-width: 100%; display: block; }
   margin-inline: auto;
 }
 
-.plate-media .plate-frame video { aspect-ratio: 9 / 16; }
+.plate-media .plate-frame video { aspect-ratio: 16 / 9; }
+
+.film-portrait .plate-frame video { aspect-ratio: 9 / 16; }
 
 .plate-info { padding-top: 0.4rem; }
 
@@ -420,7 +422,7 @@ img, svg, video { max-width: 100%; display: block; }
 
 .plate-detail { margin-top: 1.8rem; max-width: 300px; }
 
-.plate-detail .plate-frame img { aspect-ratio: 1 / 1; }
+.plate-detail .plate-frame img { aspect-ratio: 3 / 4; }
 
 /* ── Gallery · auto-cycling plates ──────────────────────── */
 
@@ -455,6 +457,12 @@ img, svg, video { max-width: 100%; display: block; }
 
 /* slow push-in while a plate is on display */
 @keyframes plate-drift { from { transform: scale(1); } to { transform: scale(1.045); } }
+
+/* portrait slideshows (tall renders) */
+.slides-portrait .slides { aspect-ratio: 3 / 4; }
+
+/* letterbox instead of crop — for drawings and tall renders */
+.slides-contain .slides img { object-fit: contain; animation: none; }
 
 .gallery-caption {
   display: flex;
@@ -497,6 +505,49 @@ img, svg, video { max-width: 100%; display: block; }
 }
 
 .materials-grid .plate-frame img { aspect-ratio: 3 / 4; }
+
+/* wide variant for kitchen / project renders */
+.renders-grid .plate-frame img { aspect-ratio: 3 / 2; }
+
+.gmar-renders { margin-top: clamp(2rem, 5vh, 3.2rem); }
+
+.gmar-book-btn { margin-top: 1.6rem; }
+
+/* drafting-style document index (PDF portfolio books) */
+.doc-plate { position: relative; margin: 0; }
+
+.doc-index {
+  border: 1px solid var(--line);
+  background: var(--card);
+  box-shadow: 0 1px 0 var(--shadow);
+}
+
+.doc-index a {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.15rem 1.3rem;
+  border-top: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s, color 0.2s;
+}
+
+.doc-index a:first-child { border-top: none; }
+
+.doc-index a:hover { background: var(--paper-deep); color: var(--accent-ink); }
+
+.doc-index .doc-name { font-weight: 500; font-size: 0.97rem; }
+
+.doc-index .doc-pages {
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  white-space: nowrap;
+}
 
 /* ── Drawn elevation divider ────────────────────────────── */
 
