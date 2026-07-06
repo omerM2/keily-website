@@ -613,7 +613,29 @@ img, svg, video { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
-.contact-meta { margin-top: 1.8rem; }
+/* Instagram — drawn in the same monoline stroke as the drafting callouts */
+.contact-social { margin-top: 2.2rem; }
+
+.contact-social a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--accent-ink);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.contact-social a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.contact-social svg { width: 21px; height: 21px; }
+
+.contact-meta { margin-top: 1.6rem; }
 
 /* ── Footer title block ─────────────────────────────────── */
 
