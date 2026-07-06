@@ -23,6 +23,15 @@
   --mono:    "IBM Plex Mono", ui-monospace, "SF Mono", monospace;
 }
 
+/* Hebrew edition: same drawing-set voice, Hebrew-native typefaces.
+   Frank Ruhl Libre ↔ Marcellus, Assistant ↔ Archivo,
+   IBM Plex Sans Hebrew backs up Plex Mono for Hebrew drafting labels. */
+:root:lang(he) {
+  --display: "Frank Ruhl Libre", "Marcellus", Georgia, serif;
+  --body:    "Assistant", "Archivo", -apple-system, sans-serif;
+  --mono:    "IBM Plex Mono", "IBM Plex Sans Hebrew", ui-monospace, monospace;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --paper:      #1b1915;   /* studio at night */
@@ -82,7 +91,7 @@ img, svg, video { max-width: 100%; display: block; }
 .sheet-tag {
   position: absolute;
   top: -0.7rem;
-  left: 1.1rem;
+  inset-inline-start: 1.1rem;
   z-index: 2;
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -294,7 +303,7 @@ img, svg, video { max-width: 100%; display: block; }
   gap: 0.05rem;
 }
 
-.titleblock div:not(:last-child) { border-right: 1px solid var(--line); }
+.titleblock div:not(:last-child) { border-inline-end: 1px solid var(--line); }
 
 .titleblock span, .titleblock-footer span {
   font-family: var(--mono);
@@ -551,8 +560,8 @@ img, svg, video { max-width: 100%; display: block; }
   font-family: var(--display);
   font-size: clamp(1.2rem, 2vw, 1.45rem);
   color: var(--ink);
-  border-left: 2px solid var(--accent);
-  padding-left: 1.4rem;
+  border-inline-start: 2px solid var(--accent);
+  padding-inline-start: 1.4rem;
   margin-top: 1.8rem;
   max-width: 34rem;
 }
@@ -610,13 +619,13 @@ img, svg, video { max-width: 100%; display: block; }
 
 .titleblock-footer div {
   padding: 0.85rem clamp(0.8rem, 2vw, 1.4rem);
-  border-right: 1px solid var(--line);
+  border-inline-end: 1px solid var(--line);
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
 }
 
-.titleblock-footer div:last-child { border-right: none; }
+.titleblock-footer div:last-child { border-inline-end: none; }
 
 .titleblock-footer strong {
   font-weight: 500;
