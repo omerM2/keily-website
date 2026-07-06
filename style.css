@@ -370,7 +370,7 @@ img, svg, video { max-width: 100%; display: block; }
 /* the walkthrough film is portrait phone footage — mount it as a tall plate */
 .film-portrait {
   position: relative;
-  max-width: 400px;
+  max-width: 320px;
   margin-inline: auto;
 }
 
